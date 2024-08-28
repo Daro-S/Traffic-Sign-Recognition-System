@@ -1,3 +1,7 @@
 video/
 runs/
 yolov10/
+descriptions_mp3/
+output/
+inference_sdk/
+video/

@@ -4,12 +4,85 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Traffic Sign Recognition</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f3e5f5; /* Light purple background */
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .upload-icon {
+        font-size: 50px;
+        color: #8e44ad; /* Purple color for the upload icon */
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        color: #8e44ad;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #333;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+
+      button {
+        background-color: #8e44ad;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #732d91;
+      }
+    </style>
   </head>
   <body>
-    <h1>Upload Image or Video</h1>
-    <form action="/" method="post" enctype="multipart/form-data">
-      <input type="file" name="file" accept="image/*,video/*" />
-      <input type="submit" value="Upload" />
-    </form>
+    <div class="container">
+      <div class="upload-icon">⬆️</div>
+      <h1>Traffic Sign Recognition</h1>
+      <form method="POST">
+        <label for="image_url">Image URL:</label>
+        <input type="text" id="image_url" name="image_url" required />
+        <button type="submit">Submit</button>
+      </form>
+
+      {% if image_url and predicted_label is not none %}
+      <h2>Result</h2>
+      <p><strong>Predicted Label Index:</strong> {{ predicted_label }}</p>
+      <p><strong>Predicted Label Name:</strong> {{ predicted_label_name }}</p>
+      <img src="{{ image_url }}" alt="Input Image" width="300" />
+      {% elif image_url %}
+      <h2>No traffic signs detected or low confidence.</h2>
+      {% endif %}
+    </div>
   </body>
 </html>
