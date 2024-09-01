@@ -16,8 +16,7 @@ This project focuses on recognizing traffic signs using a deep learning model. T
 
 Follow these steps to set up and run the project:
 
-1. **Create a Virtual Environment**:
-   run:
+1. **To run an application**:
 
    ```bash
    pip install -r requirements.txt
@@ -26,3 +25,5 @@ Follow these steps to set up and run the project:
    ```bash
    python app.py
    ```
+
+   **Note**: To display the audio you must have the mp3 file first it, and update the path in the app.py
