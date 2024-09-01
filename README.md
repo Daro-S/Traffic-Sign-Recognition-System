@@ -17,6 +17,12 @@ This project focuses on recognizing traffic signs using a deep learning model. T
 Follow these steps to set up and run the project:
 
 1. **Create a Virtual Environment**:
-   run: pip install -r requirements.txt
-   cd Traffic-Sign-Recognition
+   run:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+   ```bash
    python app.py
+   ```

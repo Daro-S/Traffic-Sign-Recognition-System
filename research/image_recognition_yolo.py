@@ -94,6 +94,7 @@ def render_image_with_bboxes(frame, dbboxes, output_dir):
     print(f"Output image saved to {output_image_path}")
 
 def main():
+    import pathlib as Path
     script_dir = Path(__file__).parent
     image_url = "https://www.portland.gov/sites/default/files/styles/facebook/public/2022/stop-sign1.jpg?itok=jOxx-iED"
     output_dir = str(script_dir / 'yolov10' / 'output')
