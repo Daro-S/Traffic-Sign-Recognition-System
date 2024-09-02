@@ -26,4 +26,4 @@ Follow these steps to set up and run the project:
    python app.py
    ```
 
-   **Note**: To display the audio you must have the mp3 file first it, and update the path in the app.py
+   **Note**: To play the audio you must have the mp3 file first and update the path in the app.py
